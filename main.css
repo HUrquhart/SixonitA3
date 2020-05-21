@@ -285,8 +285,12 @@ progress[value]::-webkit-progress-value,
     appearance: none;
     border: none;
     border-radius: 5px;
-    background-size: 35px 20px, 100% 100%, 100% 100%;
 }
+progress::-webkit-progress-bar{
+    background-color: #0a0e12;
+    z-index: -1;
+}
+
 .progress-1[value]::-webkit-progress-value,
 .progress-1[value]{
      background-color: #1da4e2;
