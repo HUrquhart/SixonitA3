@@ -29,11 +29,11 @@ h1 {
     color: #ffffff;
 }
 
-h2 {font-size: 2.157em;}
+h2 {font-size: 2.557em;}
 
-h3 {font-size: 1.569em;}
+h3 {font-size: 2.00em;}
 
-h4 {font-size: 1.4em;}
+h4 {font-size: 1.5em;}
 
 h5 {font-size: 1.333em;}
 
@@ -44,15 +44,19 @@ small, .text_small {font-size: 0.75em;}
 article.LWP{
     /* remove excess padding due to nav positioning */
     padding-top: 80px;
-    margin-top: -80px;
 }
-
-article.team-profile, article.overview{
+article{
     padding: 80px 0;
     margin: 80px 0;
+}
+article.team-profile, article.overview{
     background-color: #0a0e12;
 }
-
+article.team-profile{
+    position: relative;
+    top: 100px;
+    margin-top: -80px;
+}
 main h2:after,
 main h3:after,
 main h4:after,
@@ -156,6 +160,10 @@ nav ul li a:hover, nav ul li a:focus, .active-link{
 nav ul li a:active{
     color: red;
 }
+nav .brand{
+    text-decoration: none;
+    border: none;
+}
 #slider-container{
     position: relative;
     min-height: max-content;
@@ -172,15 +180,28 @@ nav ul li a:active{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-
+.team-grid img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 320px;
+    height: 100%;
+    width: 100%;
+    object-position: top;
+}
+.team-member{
+    margin-bottom: 40px;
+}
+.team-grid .team-member h3{
+    margin-top: 10px;
+}
 footer{
-    margin-top: 200px;
     background-color: #111  ;
     color: #a3a3a3;
     min-height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 80px 0 ;
 }
 .center{
     text-align: center;
@@ -192,8 +213,6 @@ footer{
 .slide-item .bg{
     background-color: rgba(255,255,255,.3);
     padding: 40px;
-    margin-bottom: 80px;
-    border-radius: 5px;
 }
 .slide-item h2{
     margin-top: 0;
@@ -233,4 +252,67 @@ img{
 }
 footer a{
     color: #02da92;
+}
+#profile-header {
+padding: 100px;
+}
+#profile-header img{
+    padding: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 320px;
+    height: 320px;
+    background-color: #1da4e2;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+[class^="progress-"]{
+    width: 100%;
+    display: block;
+    height: 10px;
+    background-color: #333;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+progress[value]::-webkit-progress-value,
+.progress[value]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+.progress-1[value]::-webkit-progress-value,
+.progress-1[value]{
+     background-color: #1da4e2;
+     color: #1da4e2;
+}
+.progress-2[value]::-webkit-progress-value,
+.progress-2[value]{
+    background-color: orange;
+    color: orange;
+}
+.progress-3[value]::-webkit-progress-value,
+.progress-3[value]{
+    background-color: darkgreen;
+    color: darkgreen;
+}
+.progress-4[value]::-webkit-progress-value,
+.progress-4[value]{
+    background-color: pink;
+    color: pink;
+}
+.progress-5[value]::-webkit-progress-value,
+.progress-5[value]{
+    background-color: purple;
+    color: purple;
+}
+
+.bg-black{
+    background-color: #000;
 }

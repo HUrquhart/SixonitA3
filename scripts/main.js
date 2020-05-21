@@ -23,6 +23,18 @@ $(document).ready(function(){
         backgroundColor: 0xb0811,
         spacing: 16.00
     });
+  VANTA.NET({
+    el: "#profile-header",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 600.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x3fc6ff,
+    backgroundColor: 0xb0811,
+    spacing: 16.00
+  });
 
     $('#hero-slider').slick({
         arrows: false,
